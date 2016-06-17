@@ -9,7 +9,10 @@
 close all
 
 % User input
-subjectNumber = 1;
+subjectNumber = 30;                          % 1 3 5-8 11 14-17 19 21-23 25-30
+if ~ismember(subjectNumber, unique(subjecttrain))
+    error('Imporper value of the variable ''subjectNumber''!')
+end
 
 Fs = 50;                                    % Sampling frequency
 
@@ -36,4 +39,4 @@ ylabel('totalaccxtrain')
 legend(p, activitylabels)
 hold off
 
-clear Fs p r R subjectNumber t T
+clear color_order Fs p r relevantData relevantLabels R subjectNumber t T
