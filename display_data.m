@@ -21,7 +21,7 @@ relevantLabels = labeltrain(subjecttrain == subjectNumber);
 [R,~] = size(relevantData);
 
 color_order = get(groot, 'defaultAxesColorOrder');
-figure('Position', [0 0 1200 700])
+figure('Position', [720 300 1200 700])
 hold on
 
 p = zeros(1,6);                             % Chart line object which will be used later in the legend
