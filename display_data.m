@@ -9,14 +9,14 @@
 close all
 
 % User input
-subjectNumber = 30;                          % 1 3 5-8 11 14-17 19 21-23 25-30
+subjectNumber = 1;                          % 1 3 5-8 11 14-17 19 21-23 25-30
 if ~ismember(subjectNumber, unique(subjecttrain))
     error('Imporper value of the variable ''subjectNumber''!')
 end
 
 Fs = 50;                                    % Sampling frequency
 
-relevantData = totalaccxtrain(subjecttrain == subjectNumber, 1:64);
+relevantData = bodygyroxtrain(subjecttrain == subjectNumber, 1:64);
 relevantLabels = labeltrain(subjecttrain == subjectNumber);
 [R,~] = size(relevantData);
 
