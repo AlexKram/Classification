@@ -9,19 +9,19 @@
 close all
 
 % User input
-subjectNumber = 1;                          % 1 3 5-8 11 14-17 19 21-23 25-30
+subjectNumber = 30;                          % 1 3 5-8 11 14-17 19 21-23 25-30
 if ~ismember(subjectNumber, unique(subjecttrain))
     error('Imporper value of the variable ''subjectNumber''!')
 end
 
 Fs = 50;                                    % Sampling frequency
 
-relevantData = bodygyroxtrain(subjecttrain == subjectNumber, 1:64);
+relevantData = totalaccxtrain(subjecttrain == subjectNumber, 1:64);
 relevantLabels = labeltrain(subjecttrain == subjectNumber);
 [R,~] = size(relevantData);
 
 color_order = get(groot, 'defaultAxesColorOrder');
-figure('Position', [720 300 1200 700])
+figure('Position', [0 0 1200 700])
 hold on
 
 p = zeros(1,6);                             % Chart line object which will be used later in the legend

@@ -43,6 +43,3 @@ activitylabels = dataArray{1,2};
 
 %% Remove underscores
 activitylabels = strrep(activitylabels, '_', ' ');
-
-%% Clear temporary variables
-clearvars filename delimiter formatSpec fileID dataArray ans;
