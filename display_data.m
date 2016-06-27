@@ -9,7 +9,7 @@
 close all
 
 % User input
-subjectNumber = 30;                          % 1 3 5-8 11 14-17 19 21-23 25-30
+subjectNumber = 1;                          % 1 3 5-8 11 14-17 19 21-23 25-30
 if ~ismember(subjectNumber, unique(subjecttrain))
     error('Imporper value of the variable ''subjectNumber''!')
 end

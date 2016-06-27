@@ -11,7 +11,7 @@ function activitylabels = import_activitylabels(path)
 % Last modifid by Alexander Kramlich on 2016/06/18 16:47:00
 
 %% Initialize variables.
-filename = [path, '\UCI HAR Dataset\activity_labels.txt'];
+filename = [path, '\activity_labels.txt'];
 delimiter = ' ';
 
 %% Format string for each line of text:

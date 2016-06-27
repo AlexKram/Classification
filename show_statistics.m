@@ -12,20 +12,17 @@ close all
 [R,~] = size(totalaccxtrain);
 
 % Preallocation of the array of structs
-features(1:R) = struct('mean', [],...
-                       'variance', [],...
-                       'skewness', [],...
-                       'kurtosis', []);
+featureNames = feature_names();
+features(1:R) = cell2struct(cell(size(featureNames)), featureNames, 2);
                    
 % Calculation of the features
+my_filter = highpassfilter();
 for r=1:R
-    features(r) = calculate_features(totalaccxtrain(r,:));
+    features(r) = calculate_features(totalaccxtrain(r,:), my_filter);
 end
 
 f = figure('Position', [300 280 750 600]);
 tgroup = uitabgroup(f);
-
-featureNames = fieldnames(features);
 
 K = length(featureNames);
 t = zeros(1,K);
@@ -38,7 +35,7 @@ for k=1:K
     set(t_ax(k), 'XTickLabelRotation',45)
 end
 
-clear f featureNames features k K r R t t_ax tgroup
+clear f featureNames k K r R t t_ax tgroup
 
 %% Histograms (maybe)
 % numberOfBins = 20;
