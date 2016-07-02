@@ -6,10 +6,10 @@
 % Last modified - 21.06.2016 Alexander Kramlich
 % ------------------------------------------------
 
-current_location = 'Home';
+current_location = 'RZ';
 switch current_location
     case 'RZ'
-        path = 'U:\Documents\MATLAB\UCI HAR Dataset';
+        path = 'U:\Documents\MATLAB\Project - Classification\UCI HAR Dataset';
     case 'Home'
         path = 'C:\Users\Alexander\Documents\MATLAB\Project - Classification\UCI HAR Dataset';
     otherwise

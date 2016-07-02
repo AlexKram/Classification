@@ -1,9 +1,9 @@
-% DISPLAY_DATA.M
+% DISPLAY_DATA
 %
 % ------------------------------------------------
-% Version 1.1.0.
+% Version 1.1.1.
 % Created       - 13.06.2016 Alexander Kramlich
-% Last modified - 17.06.2016 Alexander Kramlich
+% Last modified - 30.06.2016 Alexander Kramlich
 % ------------------------------------------------
 
 close all

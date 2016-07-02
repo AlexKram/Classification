@@ -50,7 +50,6 @@ for k=1:3
     ylabel('PSD')
 end
 
-
 %%
 Fs = 50;
 my_signal = bodygyroxtrain(200,:);
@@ -65,14 +64,7 @@ for k=1:(64+1)
     end
 end
 
-close all
-figure
-hold on
-plot(f, my_psd)
-ylim_temp = ylim();
-line([k k]*25/64, [ylim_temp(1), ylim_temp(2)])
-hold off
-
+clear C f filteredSignal Fs k M my_filter my_psd my_signal my_sum my_total psdSignal rawSignal rowNumber subjectNumber 
 
 %%
 % lp_filter = lowpassfilter();
